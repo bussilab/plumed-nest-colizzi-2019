@@ -23,11 +23,11 @@ awk 'BEGIN{
   if($1=="g1->") ing1=1
   if($1=="g2->") ing2=1
 }END{
-print
+print ""
 print "ENDPLUMED"
-print
+print ""
 print "# original input file with plumed 1.3 syntax follows"
-print
+print ""
 for(i=1;i<=NR;i++) print save[i]
 }' $file > ${file//orig.dat/plumed.dat}
 
